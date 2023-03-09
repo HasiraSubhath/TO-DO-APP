@@ -1,4 +1,4 @@
-
+import ToDo from "./components/ToDo";
 
 function App() {
   return (
@@ -15,8 +15,11 @@ function App() {
     </div>
 
     <div className="list">
-    
 
+    <ToDo text="ffffgfh " />
+    <ToDo text="hiiii " />
+    <ToDo text="hiiii " />
+    <ToDo text="hiiii " />
     </div>
 
 </div>
