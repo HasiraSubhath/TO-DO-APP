@@ -9,11 +9,15 @@ function App() {
 
     <div className="top">
       <input type="text" placeholder="ADD TODOS..."/>
-      </div>
+      
 
+    <div className="add">ADD</div>
+    </div>
 
+    <div className="list">
+    
 
-
+    </div>
 
 </div>
 
