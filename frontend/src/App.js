@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import ToDo from "./components/ToDo";
-import { getAllToDo} from "./utils/HandleApi";
+import { addToDo, getAllToDo} from "./utils/HandleApi";
 
 function App() {
 
   const [toDo, setToDo] = useState([])
+  const [text, setText] = useState("")
 
   useEffect(() => {
     getAllToDo(setToDo)
@@ -17,16 +18,16 @@ function App() {
 
         <h1>To DO APP</h1>
 
-     <div className="top">
+     <div className="top"> 
       <input 
       type="text" 
       placeholder="ADD TODOS..."
-     /* value={text}
-      onChange={(e) => setText(e.target.value)}*/
+      value={text}
+      onChange={(e) => setText(e.target.value)}
       />
       
 
-    <div className="add" /*onClick={addToDo}*/>ADD</div>
+    <div className="add" onClick={() => addToDo(text, setText, setToDo) }>ADD</div>
     </div>
 
     <div className="list">
