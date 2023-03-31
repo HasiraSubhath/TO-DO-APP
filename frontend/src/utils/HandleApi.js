@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "https://todo-backend-4ota.onrender.com"
 
 const getAllToDo = (setToDo) => {
     axios
@@ -26,7 +26,7 @@ const addToDo = (text, setText, setToDo) => {
 const updateToDo = (toDoId, text, setToDo, setText, setIsUpdating) => {
 
     axios
-     .post(`${baseUrl}/update`, { _id: toDoId, text })
+     .post(`${baseUrl}/update`, { _id: toDoId, text }) 
      .then((data) => {
             setText("")
             setIsUpdating(false)
